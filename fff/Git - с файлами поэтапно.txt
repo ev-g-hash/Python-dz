@@ -1,0 +1,10 @@
+
+git init
+
+git add . (все файлы и папки)
+
+git commit 
+
+git add новая папка
+
+git commit 
