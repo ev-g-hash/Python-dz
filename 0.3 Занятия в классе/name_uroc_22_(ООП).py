@@ -198,19 +198,137 @@ getattr
 #     if getattr(Person, v, False):
 #         print(v)
 
+"""
+задачка
+"""
+"""
+Маша, Prosto, Kvasha, Мы любим тебя
+"""
+
+# class Person:
+#     name1 = 'Masha'
+#     name2 = 'Prosto'
+#     name3 = 'Kvasha'
+#
+# list_person = []
+# file = ['name1', 'name2', 'name3', 'name4']
+#
+# for value in file:
+#     list_person.append(getattr(Person, value, 'Мы любим тебя'))
+#
+# print(list_person)
+
+"""
+Создайте экземпляр id_1 класса Person. Не забывайте про скобки Person().
+С помощью getattr(), выведите на экран значения трёх атрибутов, используя экземпляр. 
+Каждое значение выводится на отдельной строке, начиная с dance, 
+смотрите пример вывода ниже. Не забывайте про кавычки, если используете getattr() вне цикла.
+По желанию, используйте цикл for.
+"""
+
+# class Person:
+#     pass
+#
+# id_1 = Person()
+# print(getattr(id_1, "name", "Вася"))
+# print(getattr(id_1, "age", 18))
+# print(getattr(id_1, "hobby", "футболист"))
+
+#--------------------------------------------------------
+# list_person = ["hobby", "work", "study"]
+# class Person:
+#     hobby = "dance"
+#     work = "design"
+#     study = "college"
+#
+# id_1 = Person()
+# print(getattr(id_1, "hobby"))
+# print(getattr(id_1, "work"))
+# print(getattr(id_1, "study"))
+#
+
+"""
+Машенька увлеклась изучением коктейлей, и используя книгу, 
+решила угостить вас её коктейлем. Правда Машенька не знала, 
+что это книга для начинающих ведьмочек. Напишите программу, чтобы узнать, 
+какие ингредиенты выпадут именно вам.
+
+Задание:
+Часть кода уже написана
+Создайте класс Magic
+Создайте атрибут класса ingredients со значением sample(magic_ing, 3). 
+Таким образом создастся список из трёх рандомных ингредиентов для коктейля.
+Создайте экземпляр my_cocktail от класса Magic (не забудьте скобки).
+С помощью цикла и getattr(), выведите на экран три ингредиента, которые находятся 
+в атрибуте ingredients, используя экземпляр. Если не получится, можете вывести без цикла, 
+но с помощью getattr() для тренировки. Не забывайте кавычки в имени атрибута.
+Нажмите кнопку "Запустить код", таким образом вы увидите ингредиенты, которые 
+Машенька приготовила для вашего коктейля.
+Закомментируйте, всё что вы сделали в пункте 5 задания. Закомментировать, 
+значит поставить # перед кодом.
+Выведите на экран текст: "Спасибо, Машенька!" и нажмите кнопку "Отправить".
+"""
+# from random import sample
+#
+# class Magic1:
+#     magic_ing = ["cocos", "banan", "kiwi", "яблоко", "клубника", "арбуз", "сливки"]
+#     ingredients = sample(magic_ing, 3)
+#
+# my_cocktail = Magic1()
+#
+# for v in my_cocktail.ingredients:
+#     getattr(my_cocktail, "ingredients")
+#     print(v)
+#
+# print("спасибо Машенька")
 
 
 
+"""
+hasattr - проверка наличия атрибута
+"""
+
+# class Person:
+#     hobby = "dance"
+#     work = "design"
+#     study = "college"
+#
+# id_1 = Person()
+#
+# print(hasattr(Person, "hobby"))
+# print(hasattr(id_1, "hobby"))
+# print(hasattr(id_1, "age"))
 
 
+"""
+Предыстория:
+Машенька подписана на журнал "Покемоны". С каждым новым журналом, 
+в подарок идут три рандомные карточки с покемонами. 
+Проверьте, есть ли в новом журнале покемоны, которых нет у Машеньки.
 
+Задание:
+Создайте пустой класс Pokemon (используйте pass).
+Создайте экземпляр pokemons класса Pokemon.
+С помощью setattr(), добавьте в экземпляр 4 атрибута: 
+pikachu, scyther, gyarados, gengar. Значения у всех атрибутов будет пустая строка, 
+например pikachu = "". Можно использовать списки и циклы, или как вам удобней.
+С помощью hasattr(), сделайте проверку, есть ли в экземпляре атрибут: 
+lapras, pikachu, alakazam. Результат проверки напишите на отдельной строке, 
+соответственно перечисленным атрибутам (см. пример ниже).
+"""
 
-
-
-
-
-
-
+# class Pokemon:
+#     pass
+#
+# pokemons = Pokemon()
+# setattr(pokemons, "pikachu", "")
+# setattr(pokemons, "scyther", "")
+# setattr(pokemons, "gyarados", "")
+# setattr(pokemons, "gengar", "")
+#
+# print(hasattr(pokemons, "lapras"))
+# print(hasattr(pokemons, "pikachu"))
+# print(hasattr(pokemons, "alakazam"))
 
 
 
