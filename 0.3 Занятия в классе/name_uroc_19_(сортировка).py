@@ -141,3 +141,37 @@
 # arr = [1, 2, 4, 2, 78, 3, 90]
 # bublle_sort(arr)
 # print(arr)
+"""
+----------------------------------------------------------------------------
+алгоритм "пузырьковая сортировка" 100 случайных чисел + время 
+----------------------------------------------------------------------------
+"""
+# from random import randint
+# arr = []
+#
+# for i in range(100):
+#     arr.append(randint(0, 100))
+#
+# def bublle_sort(arr):
+#     n = len(arr) # проходим по всем элементам
+#     for i in range(n):
+#         swapped = False
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j + 1]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+#             swapped = True
+#
+#         if not swapped:
+#             break
+#
+# import timeit
+# bublle_sort(arr)
+# execution_time = timeit.timeit(lambda: bublle_sort(arr), number=1)
+#
+# import time
+# start_2 = time.time()
+# bublle_sort(arr)
+# end_2 = time.time() - start_2
+#
+# print(f"""время исполнения: \t  --- {end_2}   сек""")
+# print("скорость:", execution_time)
